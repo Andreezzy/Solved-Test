@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  body: MyText
+  flag: false
+  category: one
+  num_views: 1
+  user: one
+
+two:
+  title: MyString
+  body: MyText
+  flag: false
+  category: two
+  num_views: 1
+  user: two

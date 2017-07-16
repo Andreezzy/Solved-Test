@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="indigo lighten-3 fondo">
+  <head>
+    <meta charset="utf-8">
+    <title>Free Notes</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="row fondo" style="margin-top:65px;">
+      <div class="col s3 m3 l4">
+      </div>
+      <div class="col s6 m6 l4">
+        <% unless notice.nil? %>
+          <div class="row">
+            <div class="col s12 m10 l10 offset-m1 offset-l1">
+              <div class="chip red" style="padding: 10px 10px 10px 10px; width: 100%; height: 50px;">
+                <i class="material-icons white-text left" style="padding-top: 2px;">report_problem</i>
+                <h6 class="white-text"><b>OOPS!</b> <%= notice %>: <%= alert %><h6>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+        <div class="card teal lighten-2">
+
+          <div class="card-image" style="">
+            <%= image_tag "image.png" %>
+            <div class="right">
+              <span class="card-title purple-text edarken-4 title">Note Free</span>
+            </div>            
+          </div>
+          <div class="card-content">
+            <p>¿No quieres olvidar algo?, ¿perdiste una cita? No todo esta perdido...</p>
+            <h5 class="center">¡¡Que estas esperando!!</h5>
+          </div>
+          <div class="card-action center">
+            <%= form_tag user_facebook_omniauth_authorize_path, method: :post do %>
+              <%= button_tag 'Login with Facebook', class: "loginBtn loginBtn--facebook hoverable " %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col s3 m3 l4">
+      </div>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-copyright center blue lighten-2">
+        <div class="container">
+          <p>© 2017 Copyright Text - By: <a href="https://www.facebook.com/andresfrankm"> Andres Frank Alexis </a></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

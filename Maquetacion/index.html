@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Maquetacion</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Passion+One:900" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<style type="text/css">
+
+		body {
+			background-color: #F6BD2E;
+			padding-top: 100px;
+		}
+		div.contenedor {
+			background-color: #fff;
+			margin-top: 60px;
+			width: 80%;
+			max-width: 800px;
+			margin: auto;
+			border-radius: 20px;
+			z-index: 100;
+		}
+		div.imagen {
+			width: 100%;
+			height: 300px;
+			background-image: url('http://deconceptos.com/wp-content/uploads/2015/09/concepto-de-monta%C3%B1a.jpg');
+			background-repeat: no-repeat;
+			background-size: 100%;
+			display: flex;
+		}
+		div.imagen img {
+			width: 35%;
+			position: relative;
+			bottom: 50px;
+			margin: auto;
+			display: inline;
+			justify-content: center;
+		}
+		div.main{
+			display: flex;
+			padding: 50px;
+		}
+		div.cuerpo {
+			width: 80%;
+		}
+		aside {
+			width: 20%;
+		}
+		div.cuerpo h1 {
+			text-transform: uppercase;
+			font-family: 'Passion One';
+			font-weight: 900;
+			font-size: 45px;
+			margin-bottom: 10px;
+		}
+		div.cuerpo p {
+			font-family: 'Open Sans';
+			color: #8b8b8b;
+			line-height: 26px;
+			letter-spacing: 0.6pt;
+
+		}
+		div.star i {
+			color: #F6BD2E;
+		}
+		.puntuacion {
+			margin-left: 5px;
+			color: #8b8b8b;
+		}
+		nav a{
+			color: #333;
+			text-decoration: none;
+			border-left: 1px solid black;
+			padding: 0 15px;
+		}
+		nav a:first-child {
+			border: none;
+			padding-left: 0px;
+		}
+		.btn  {
+			padding-top: 20px;
+		}
+		.btn button {
+			padding: 20px 30px; 
+			background-color: #F6BD2E;
+			border: none;
+			color: #fff;
+			font-family: 'Open Sans';
+			font-weight: 900;
+			text-transform: uppercase;
+			border-radius: 10px;
+		}
+		.amigos {
+			padding: 0 20px;
+			
+			display: flex;
+			flex-direction: column;
+			height: 30vh;
+			justify-content: center;
+			flex-wrap: wrap;
+
+		}
+		.amigos div{
+			width: 30px;
+			height: 30px;
+			background-color: #000;
+		}
+		.amigos div img {
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="contenedor">
+		<div class="imagen">
+			<img src="charlie.png" alt="Charlie Brow">
+		</div>
+		<div class="main">
+			<div class="cuerpo">
+				<h1>The peanuts Movie</h1>
+				<div class="star">
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star" aria-hidden="true"></i>
+					<i class="fa fa-star-half" aria-hidden="true"></i>
+					<span class="puntuacion">8/10</span>
+				</div>
+				<p>Snoopy e,bacrk umpor jsis hreat misson as he and jhis team take ot tje askes to spoas atja  , hule his best pal cherlei bros bein gis eponc bajc home.</p>
+				<nav>
+					<a href="#">Animation</a>
+					<a href="#">Adventure</a>
+					<a href="#">Comedy</a>
+					<a href="#">Family</a>
+				</nav>
+				<div class="btn">
+					<button>Buy tikets</button>
+					<button>Watch trailer</button>
+				</div>
+			</div>
+			<aside>
+				<h2>7 friends<span>Have watched this movie</span></h2>
+				<div class="amigos">
+					<div>
+						<img src="https://www.tuexperto.com/wp-content/uploads/2015/07/perfil_01.jpg" alt="">
+					</div>
+					<div>
+						<img src="https://www.tuexperto.com/wp-content/uploads/2015/07/perfil_01.jpg" alt="">
+					</div>
+					<div>
+						<img src="https://www.tuexperto.com/wp-content/uploads/2015/07/perfil_01.jpg" alt="">
+					</div>
+					<div>
+						<img src="https://www.tuexperto.com/wp-content/uploads/2015/07/perfil_01.jpg" alt="">
+					</div>
+					<div>
+						<img src="https://www.tuexperto.com/wp-content/uploads/2015/07/perfil_01.jpg" alt="">
+					</div>
+					<div>
+						<img src="https://www.tuexperto.com/wp-content/uploads/2015/07/perfil_01.jpg" alt="">
+					</div>
+					<div>
+						<img src="https://www.tuexperto.com/wp-content/uploads/2015/07/perfil_01.jpg" alt="">
+					</div>
+					<div>
+						<img src="https://www.tuexperto.com/wp-content/uploads/2015/07/perfil_01.jpg" alt="">
+					</div>
+					<div>
+						<img src="https://www.tuexperto.com/wp-content/uploads/2015/07/perfil_01.jpg" alt="">
+					</div>
+					<div>
+						<img src="https://www.tuexperto.com/wp-content/uploads/2015/07/perfil_01.jpg" alt="">
+					</div>
+				</div>
+			</aside>
+		</div>
+	</div>
+</body>
+</html>

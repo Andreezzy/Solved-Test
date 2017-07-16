@@ -1,0 +1,17 @@
+<% @title = "Editando...."%>
+<div class="container center">
+	<div class="row">
+		<div class="col s2 m2">.</div>
+    <div class="col s10 m8 l8 center teal lighten-2 z-depth-4">
+    	<h3>Editar Nota</h3>
+			<%= render 'form', note: @note %>
+    </div>
+    <div class="col s2 m2">.</div>
+  </div>
+  <%= link_to @note, class: "btn waves-effect waves-light" do %>
+		<i class="material-icons right">send</i>Ver Nota
+	<% end %>
+	<%= link_to notes_path, class: "btn waves-effect waves-light" do %>
+		<i class="material-icons right">send</i>Atras
+	<% end %>
+</div>

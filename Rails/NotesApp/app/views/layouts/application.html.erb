@@ -1,0 +1,112 @@
+<html class="indigo lighten-3">
+  <head>
+    <meta charset="utf-8">
+    <% @title ||= "NoteApp" %>
+    <title><%= @title%></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    
+    <div class="hide-on-large-only">
+      <nav>
+        <div class="nav-wrapper indigo lighten-1">
+          <a href="" data-activates="slide-out" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only">
+            <i class="material-icons">menu</i>
+          </a>
+          <a href="" class="brand-logo center">
+            <h4 class="center-on-small-only center-align"><%= @title%></h4>
+            <!--<img class="responsive-img" src=<%= image_url('logo.jpg') %>>-->
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <ul id="slide-out" class="side-nav indigo lighten-1 center">
+      <li>
+        <div class="userView">
+          <div class="background">
+            <li style="padding-top: 5px;"><%= image_tag current_user.image, class: "circle responsive-img" %></li>
+          </div>
+          <a href=""><span class="name white-text"><%= current_user.name %></span></a>
+          <a href=""><span class="email white-text"><%= current_user.email %></span></a>
+        </div>
+      </li>
+      <li><div class="divider"></div></li>
+      <li>
+        <%= form_tag notes_path, :method => 'get' do %>
+          <div class="input-field">
+            <%= text_field_tag :search, params[:search], class: "validate", id: "search", required: true %>
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          </div>
+        <% end %>
+      </li>
+      <li><%= link_to "Mis Notas", notes_path(m: 1), class: "waves-effect white-text" %></li>
+      <li><%= link_to "Todas las Notas", notes_path, class: "waves-effect white-text" %></li>
+      <li><%= link_to "Categorias", categories_path, class: "waves-effect white-text" %></li>
+
+      <li><div class="divider"></div></li>
+      <li>
+        <%= link_to destroy_user_session_path, class:"white-text", :method => :delete do %>
+          <i class="material-icons right">settings_power</i>Cerrar Sesión
+        <% end %>
+      </li>
+              
+    </ul>
+
+    <header>
+      <div class="hide-on-med-and-down">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">
+              <%= image_tag "favicon.png", class: "circle responsive-img" %>
+            </a>
+            <ul class="right">
+              <li>
+                <%= form_tag notes_path, :method => 'get' do %>
+                  <div class="input-field">
+                    <%= text_field_tag :search, params[:search], class: "validate", id: "search", required: true %>
+                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                  </div>
+                <% end %>
+              </li>
+              <li><%= link_to "Mis Notas", notes_path(m: 1), class: "waves-effect" %></li>
+              <li><%= link_to "Todas las Notas", notes_path, class: "waves-effect" %></li>
+              <li><%= link_to "Categorias", categories_path, class: "waves-effect" %></li>
+              <li style="padding-top: 5px;"><%= image_tag current_user.image, class: "circle responsive-img" %></li>
+              <li>
+                <%= link_to destroy_user_session_path, :method => :delete do %>
+                  <i class="material-icons">settings_power</i>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <% if !notice.nil? %>
+          <div class="card-panel green">
+            <span class="white-text">
+              <span class="notice"><%= notice %></span>
+            </span>
+          </div>
+        <% end %>
+        <% if !alert.nil? %>
+          <div class="card-panel red">
+            <span class="white-text">
+              <span class="alert"><%= alert %></span>
+            </span>
+          </div>
+        <% end %>
+        <br />  
+        <%= yield %>
+      </div>
+    </main>
+  </body>
+</html>

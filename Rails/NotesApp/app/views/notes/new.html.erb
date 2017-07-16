@@ -1,0 +1,14 @@
+<% @title = "Agregando...."%>
+<div class="container center">
+	<div class="row center">
+		<div class="col s2 m2">.</div>
+    <div class="col s12 m8 l8 center teal lighten-2 z-depth-4">
+    	<h3>Agregar Nota</h3>
+			<%= render 'form', note: @note %>
+    </div>
+    <div class="col s2 m2">.</div>
+  </div>
+	<%= link_to notes_path, class: "btn waves-effect waves-light" do %>
+		<i class="material-icons right">send</i>Atras
+	<% end %>
+</div>
